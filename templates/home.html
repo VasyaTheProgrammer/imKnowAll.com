@@ -1,0 +1,51 @@
+ <meta chareset = "UTF-8">
+  <title>я всЄ знаю!.com</title>
+ </head>
+ <body bgcolor = #00FF00>
+ <h2 align="center">Наш сайт</h2>
+ <hr/> 
+  <ol>
+
+  <h2 align = "center"> кратко о нашем доме</h2>  
+ <hr/>
+  <p><font color = "#0000FF">название:Земля</p>
+  <p>спутник:Ћуна</p>
+  </font>
+  <p>радиус:6 356 863м</p>
+  <p>средн€€ температура(в градусах):14,8</p>
+  <p><font color = "#FF0000">кол-во человек(по данным 2017 года):7,55 млрд человек</font></p>  
+  <img src="Earth.jpg" height="600px" width = "600px"/>
+
+ <table border ="2">
+  <p>вода:75</p>
+  <p>суша:25</p>
+ <script language="javascript">
+   alert("внимание!все файлы скачаны из интернета и нам не принадлежат")
+   var z = confirm("хотите оставить коментарий?");
+   if (z == true){
+    var x = prompt("ваш коментарий");
+    if (x == null){
+     document.write(localStorage.getItem("comment"));
+    }
+    else{
+     document.write(x);
+     localStorage.setItem("comment",x);
+    }   
+   }
+   function commented(){
+    var x = prompt("ваш коментарий");
+    if (x == null){
+     document.write("пожалуйста,перезагрузите страницу")
+     document.write(localStorage.getItem("comment"));
+    }
+    else{
+     document.write("пожалуйста,перезагрузите страницу,ваш коментарий:")
+     localStorage.setItem("comment",x);
+     document.write(localStorage.getItem("comment"));
+    }
+   }   
+   document.write(localStorage.getItem("comment"));
+  </script>
+  <button onclick="commented()"оставить коментарий</button>
+ </body>
+</html> 
